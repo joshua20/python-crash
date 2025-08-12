@@ -34,3 +34,13 @@ else:
 alien_0['x_position']=alien_0['x_position'] + x_increment
 
 print(f"the new alien is at new x_position \n {alien_0}")
+
+
+#removing key-value pairs from a dictionary
+
+print(alien_0)
+
+del alien_0['points']
+
+print(f" the new alien after deleting 'points'\n\t{alien_0}")
+
