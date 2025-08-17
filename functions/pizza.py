@@ -9,3 +9,13 @@ def make_pizza(*toppings):
 make_pizza('peperoni')
 make_pizza('mushrooms','green peppers','extra cheese')
 
+#mixing positional and arbitrary arguments
+
+def mak_pizza(size, *toppings):
+    '''mixing positional and arbitrary arguments'''
+    print(f"\n making a {size}-inch pizza with the following toppings")
+
+    for topping in toppings:
+        print(topping)
+
+mak_pizza(4, 'mushroom','peperoni')
