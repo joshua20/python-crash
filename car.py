@@ -24,6 +24,9 @@ class Car:
             print(f"updated odometer reading is now at {self.odometer_reading}")
         else:
             print("you cannot rollback the odometer")
+    def increment_odometer(self,mileage):
+        '''increment the odometer reading using a function'''
+        self.odometer_reading += mileage
 
 my_new_car=Car('audi','a4',2012)
 print(my_new_car.get_descriptive_name())
@@ -41,3 +44,11 @@ my_new_car.read_odometer()
 #my_new_car.update_odometer(30)
 print("updated odometer reading")
 my_new_car.update_odometer(45)
+
+print("my other used care details \n")
+
+myusedcar=Car('subaru','outback',2019)
+myusedcar.get_descriptive_name()
+myusedcar.update_odometer(20000)
+myusedcar.increment_odometer(120)
+myusedcar.read_odometer()
