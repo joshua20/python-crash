@@ -8,7 +8,7 @@ class Car:
         self.model=model
         self.year=year
         self.odometer_reading=0
-
+        self.fuel=23
     def descriptive_name(self):
         '''return a neatly formatted name'''
         longname=f"{self.year} {self.make} {self.model}"
@@ -39,18 +39,24 @@ print(my_car.descriptive_name())
 
 my_car.update_odometer(20)
 my_car.read_odometer()
+my_car.fill_tank(30)
+class Battery:
+    '''a new class to handle electric car battery infor'''
+    def __init__(self, battery_size=40):
+        '''initialize battery class'''
+        self.battery_size=battery_size
+
+    def describe_battery(self):
+        '''print a statement describing battery'''
+        print(f"this car has a {self.battery_size}-kwh batterry")
 
 class ElectricCar(Car):
     '''represents aspects of a car, specific to electric vehicles'''
     def __init__(self,make,model,year):
         super().__init__(make,model,year)
-        self.battery_size=40
+        self.battery=Battery()
         self.charge=0
-
-    def describe_battery(self):
-        '''print a statement describing the battery size.'''
-        print(f"this car has a {self.battery_size}-kwh battery")
-    
+  
     def fill_tank(self, charge):
         '''recharge battery if charge is 0'''
         if self.charge == 0:
@@ -63,5 +69,5 @@ my_leaf=ElectricCar('nissan','leaf','2020')
 
 print(my_leaf.descriptive_name())
 
-my_leaf.describe_battery()
+my_leaf.battery.describe_battery()
 my_leaf.fill_tank(0)
