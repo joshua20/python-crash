@@ -28,7 +28,12 @@ class Car:
     def increment_odometer(self, miles):
         '''add a given amount to the odometer reading'''
         self.odometer_reading += miles
-
+    def fill_tank(self,fuel):
+        '''refill tank if fuel is empty'''
+        if self.fuel=="":
+            self.fuel += 10
+        print(f" your tank has {self.fuel} litres of fuel")
+        
 my_car=Car('subaru','outback','2024')
 print(my_car.descriptive_name())
 
@@ -40,10 +45,17 @@ class ElectricCar(Car):
     def __init__(self,make,model,year):
         super().__init__(make,model,year)
         self.battery_size=40
+        self.charge=0
 
     def describe_battery(self):
         '''print a statement describing the battery size.'''
         print(f"this car has a {self.battery_size}-kwh battery")
+    
+    def fill_tank(self, charge):
+        '''recharge battery if charge is 0'''
+        if self.charge == 0:
+            self.charge += 100
+        print(f"you now have {self.charge} of charge")
 
 #example of an electric car
 
@@ -52,3 +64,4 @@ my_leaf=ElectricCar('nissan','leaf','2020')
 print(my_leaf.descriptive_name())
 
 my_leaf.describe_battery()
+my_leaf.fill_tank(0)
