@@ -14,4 +14,9 @@ class Dog:
     def roll_over(self):
         '''simuate a dog rolling over after a command'''
         print(f"{self.name} is now rolling over")
+#inistantiating a class 
 
+my_dog=Dog('box',3)
+print(f"my dog's name is {my_dog.name.title()} and he is {my_dog.age} years old")
+my_dog.sit()
+my_dog.roll_over()
