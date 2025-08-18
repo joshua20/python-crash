@@ -16,7 +16,14 @@ class Car:
     def read_odometer(self):
         '''method to read car's odometer'''
         print(f"This car has {self.odometer_reading} miles on it.")
-
+    
+    def update_odometer(self, miles):
+        '''method to update odometer'''
+        if miles>= self.odometer_reading:
+            self.odometer_reading=miles
+            print(f"updated odometer reading is now at {self.odometer_reading}")
+        else:
+            print("you cannot rollback the odometer")
 
 my_new_car=Car('audi','a4',2012)
 print(my_new_car.get_descriptive_name())
@@ -31,4 +38,6 @@ my_new_car.odometer_reading=40
 
 my_new_car.read_odometer()
 
-
+#my_new_car.update_odometer(30)
+print("updated odometer reading")
+my_new_car.update_odometer(45)
