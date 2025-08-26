@@ -1,0 +1,6 @@
+in python you can declare data using variables
+
+in python yo can read file contents from other files
+
+in python you can reduce repetitive work by creating functions 
+ you emulate real world scenerios using classes in python
