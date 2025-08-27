@@ -49,6 +49,14 @@ class Battery:
     def describe_battery(self):
         '''print a statement describing battery'''
         print(f"this car has a {self.battery_size}-kwh batterry")
+    def get_range(self):
+        '''print the range this battery provides'''
+        if self.battery_size == 40:
+            range=150
+        elif self.battery_size ==65:
+            range=225
+
+        print(f"this battery can take you a range of {range} miles")
 
 class ElectricCar(Car):
     '''represents aspects of a car, specific to electric vehicles'''
@@ -71,3 +79,4 @@ print(my_leaf.descriptive_name())
 
 my_leaf.battery.describe_battery()
 my_leaf.fill_tank(0)
+my_leaf.battery.get_range()

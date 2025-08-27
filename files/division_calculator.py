@@ -20,5 +20,9 @@ while True:
     second_number=input("\n second number:  ")
     if second_number == 'q':
         break
-    answer=int(firstnumber) / int (second_number)
-    print(answer)
+    try:
+        answer=int(firstnumber) / int (second_number)
+    except ZeroDivisionError:
+        print("you cant divide by zero")
+    else:
+        print(answer)
