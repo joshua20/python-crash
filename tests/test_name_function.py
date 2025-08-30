@@ -6,3 +6,9 @@ def test_first_last_name():
     formatted_name=get_formatted_name('joshua','nyakundi')
     assert formatted_name=='Joshua Nyakundi'
 
+def test_first_middle_last_name():
+    '''do names joshua ariemba nyakundi work'''
+
+    formatted_name=get_formatted_name('joshua','ariemba','nyakundi')
+    assert formatted_name=='Joshua Ariemba Nyakundi'
+
