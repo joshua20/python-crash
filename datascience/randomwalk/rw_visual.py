@@ -5,19 +5,27 @@ import matplotlib.pyplot as plt
 from random_walk import RandomWalk
 
 
-#make a randomwalk
+while True:
 
-rw=RandomWalk()
-rw.fill_walk()
+    #make a randomwalk
 
-#plot the walk points
+    rw=RandomWalk()
+    rw.fill_walk()
 
-plt.style.use('classic')
+    #plot the walk points
 
-fig,ax=plt.subplots()
+    plt.style.use('classic')
 
-ax.scatter(rw.x_values,rw.y_values,s=15)
+    fig,ax=plt.subplots()
 
-ax.set_aspect('equal')
+    ax.scatter(rw.x_values,rw.y_values,s=15)
 
-plt.savefig("randomwalk.png")
+    ax.set_aspect('equal')
+
+    plt.savefig("randomwalk.png")
+
+
+    keep_running=input("make another walk? y/n:")
+    if keep_running == 'n':
+        break
+
