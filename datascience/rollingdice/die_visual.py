@@ -1,7 +1,7 @@
 #rolling the die
 
 from die import Die
-
+import plotly.express as px
 #create a die
 
 die=Die()
@@ -27,3 +27,10 @@ for value in poss_results:
 
 print("frequencies")
 print(frequencies)
+
+#visualize the results
+
+fig=px.bar(x=poss_results, y=frequencies, title="barchart showing results")
+fig.write_html("die_results.html")
+fig.write_image("die_results.jpeg")
+
