@@ -11,5 +11,5 @@ class Die:
 
     def roll(self):
         '''return any random number from any of the sides'''
-        return randint(1, self,num_sides)
+        return randint(1, self.num_sides)
 
