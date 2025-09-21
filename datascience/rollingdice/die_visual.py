@@ -30,7 +30,8 @@ print(frequencies)
 
 #visualize the results
 
-fig=px.bar(x=poss_results, y=frequencies, title="barchart showing results")
+labels={'x':'Result', 'y':'Frequency of result'}
+fig=px.bar(x=poss_results, y=frequencies,labels=labels, title="barchart showing results")
 fig.write_html("die_results.html")
 fig.write_image("die_results.jpeg")
 
